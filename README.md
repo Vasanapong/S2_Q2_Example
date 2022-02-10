@@ -1,4 +1,4 @@
 # S2Q2Ex
 
-check prime and fibonacci number \
+filter and search app \
 https://elegant-bhabha-a64eaa.netlify.app/
