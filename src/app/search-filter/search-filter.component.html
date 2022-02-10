@@ -1,0 +1,22 @@
+<div *ngIf="preload">
+    <div style="margin: 10px 0px; padding-left: 20px;">
+        <label>Select Category: </label><br/>
+        <select (change)="changeCategory($event)"> 
+            <option *ngFor="let item of allCategory">{{item}}</option>
+        </select>
+    </div>
+    
+    <div style="margin: 10px 0px; padding-left: 20px;">
+        <label>Search Category: </label><br/>
+        <input type="text" (keyup)="changeSearchText($event)">
+    </div>
+    
+    <hr>
+    
+    <div *ngFor="let item of searchResult" style="padding: 20px; border-bottom: 1px solid black;">
+        <div>Name : {{item.API}}</div>
+        <div>Description :{{item.Description}}</div>
+        <div>Category :{{item.Category}}</div>
+        <div>Link : <a href={{item.Link}}>{{item.Link}}</a></div>
+    </div>
+</div>
